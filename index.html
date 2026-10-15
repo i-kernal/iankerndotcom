@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>Ian Kern [dot com]</title>
+<meta name="description" content="The one in Northern Idaho.">
+<link rel="canonical" href="https://iankern.com">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ian Kern [dot com]">
+<meta property="og:title" content="Ian Kern [dot com]">
+<meta property="og:description" content="The one in Northern Idaho.">
+<meta property="og:url" content="https://iankern.com">
+<meta property="og:image" content="https://iankern.com/assets/images/share.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="899">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 17.3333px; }
+  body {
+    min-height: 100vh;
+    color: #fff;
+    font-family: "Courier New", Courier, monospace;
+    background: #262626;
+    display: flex;
+    align-items: center;
+  }
+  /* Fixed photo with left-side darkening gradient, as on the Carrd site */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(90deg, rgba(38,38,38,.47) 3%, rgba(0,0,0,0) 67%),
+      url("assets/images/bg.jpg") center / cover no-repeat;
+  }
+  section { width: 100%; max-width: 693px; padding: 3.75rem 5rem; }
+  #love { display: none; }
+  #love:target { display: block; }
+  #love:target ~ #home { display: none; }
+  h1, h2 {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    font-weight: 700;
+    font-size: 4.75rem;
+    line-height: 1.25;
+    letter-spacing: 0.0526em;
+    text-transform: uppercase;
+    color: #99F9FF;
+    margin-bottom: 0.75rem;
+  }
+  .tag { font-weight: 700; font-size: 1.25rem; line-height: 1.375; }
+  .rule { width: 5rem; height: 2px; background: #fff; border: 0; margin: 1.75rem 0; }
+  .bio p { font-size: 1.125rem; line-height: 1.625; margin-bottom: 1.5rem; }
+  .bio p:last-child { margin-bottom: 0; }
+  a { color: inherit; }
+  .icons { display: flex; gap: 1.25rem; list-style: none; }
+  .icons a { display: block; width: 2rem; height: 2rem; }
+  .icons svg { width: 100%; height: 100%; fill: #fff; }
+  a:focus-visible { outline: 2px solid #99F9FF; outline-offset: 4px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .back { display: inline-block; margin-top: 1.5rem; font-size: 1.125rem; }
+  @media (max-width: 736px) {
+    html { font-size: 13pt; }
+    section { padding: 3rem 2rem; }
+    h1, h2 { font-size: 3.5rem; }
+  }
+  @media (max-width: 400px) {
+    h1, h2 { font-size: 2.9rem; }
+  }
+</style>
+</head>
+<body>
+<section id="love">
+  <h2>I love June Kern Forever</h2>
+  <a class="back" href="#">&larr; Back</a>
+</section>
+<section id="home">
+  <h1>Ian Kern</h1>
+  <p class="tag">Logistics &amp; Things</p>
+  <hr class="rule">
+  <div class="bio">
+    <p>Howdy! I call Northern Idaho home and work with the team at <a href="https://tenicor.com">Tenicor</a>, where we build exceptional holsters and concealment gear.</p>
+    <p>We take pride in our craftsmanship, grit, and constant pursuit of excellence.</p>
+    <p>Feel free to drop me a line.</p>
+  </div>
+  <hr class="rule">
+  <ul class="icons">
+    <li><a href="https://www.linkedin.com/in/iankern/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21h-4z"/></svg></a></li>
+    <li><a href="#love" aria-label="Heart"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C.3 8.4 2.2 4 6.2 4c2.3 0 3.8 1.4 4.6 2.6h.4C12 5.4 13.5 4 15.8 4c4 0 5.9 4.4 4.2 7.7C19.5 16.4 12 21 12 21z"/></svg></a></li>
+    <li><a id="mail" href="#" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M2 4h20v16H2zm2 2v.6l8 5.2 8-5.2V6zm16 3-8 5.2L4 9v9h16z"/></svg></a></li>
+  </ul>
+</section>
+<script>
+  // Builds the address at runtime so scrapers reading the raw HTML don't get it.
+  document.getElementById("mail").href = "mailto:" + ["support", "iankern.com"].join("@");
+</script>
+</body>
+</html>
